@@ -1,0 +1,11 @@
+{
+    "status": "off",
+    "index": "..\/index.php",
+    "index_name": "Téléverser des fichiers",
+    "param": {
+        "max_file_size": "10",
+        "allowed_extensions": "pdf,jpg,jpeg,png,gif,webp",
+        "max_files_per_upload": "20",
+        "storage_path": "uploads"
+    }
+}
