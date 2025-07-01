@@ -24,18 +24,27 @@ Le module **FileUpload** permet aux utilisateurs de téléverser, visualiser, t�
 5. **Supprimez** le fichier `install.php` une fois l'installation terminée (sécurité).
 6. **Intégrez le bouton dans l'interface principale** :
 
-   - **Dans la balise `<script>` de votre `index.php` :**
+   - **Dans la balise `<?php` de votre `index.php` en haut :**
 
 ```php
-var fileSharingActive = <?php echo json_encode($fileShareActive); ?>;
-<?php // Début
 $fileUploadActive = false;
 $fileUploadConfigPath = 'modules/FileUpload/config.json';
 if (file_exists($fileUploadConfigPath)) {
     $fileUploadConfig = json_decode(file_get_contents($fileUploadConfigPath), true);
     $fileUploadActive = ($fileUploadConfig && isset($fileUploadConfig['status']) && $fileUploadConfig['status'] === 'on');
 }
-?>
+```
+
+   - **Mettre dans la balise du code 
+
+```html
+<script>
+    var Sparent = "<?php echo $_SESSION['parent']; ?>";
+</script>
+```
+
+   -  **Ajouter**
+```
 var fileUploadActive = <?php echo json_encode($fileUploadActive); ?>;
 ```
 
