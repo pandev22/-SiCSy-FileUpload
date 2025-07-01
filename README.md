@@ -35,7 +35,7 @@ if (file_exists($fileUploadConfigPath)) {
 }
 ```
 
-   - **Mettre dans la balise du code 
+   - **Mettre dans la balise du code**
 
 ```html
 <script>
